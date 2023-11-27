@@ -1,0 +1,85 @@
+/* Шрифт для всего текста */
+@font-face {
+    font-family: Comforta;
+    src: url(../fonts/Comfortaa-Bold.ttf);
+}
+
+/* Цвета */
+:root
+{
+    --main_color_blue: #1E88E5;
+    --main_color_grey: #424242;
+    --drop_down_color: white;
+    --text_color: white;
+    --shadow: rgba(0,0,0,0.4);
+    --main_card_color: rgba(66,66,66,0.2);
+}
+
+/* Расположение и поведение блока со всеми карточками */
+.polls
+{
+    max-width: 1680px;
+    margin-left: 230px;
+    margin-top: 10px;
+}
+
+/* Отступы между карточками */
+.poll_element
+{
+    margin-top: 15px;
+}
+
+/* Шапка карточки */
+.poll_header_card
+{
+    border: solid var(--main_color_blue) 1px;
+    background-color: var(--main_color_blue);
+    border-radius: 10px;
+    height: 60px;
+    display: flex;
+    position: relative;
+    color: var(--text_color);
+    font-family: Comforta;
+    margin-bottom: -10px;
+    z-index: 1;
+}
+
+
+/* Правый блок с текстом в шапке (Позиционирование по правому краю)*/
+.right_headder_card
+{
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+/* Левый блок с текстом в шапке (Позиционирование по левому краю)*/
+.left_headder_card
+{
+    padding-left: 10px;
+}
+
+/* Весь текст в шапке (Отступы между текстом) */
+.text_header_card
+{
+    margin-top: 8px;
+}
+
+
+/* Основная часть карточки */
+.poll_main_card
+{
+    padding-top: 10px;
+    border: solid var(--main_card_color) 1px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--main_card_color);
+}
+
+/* Отступ текста в основной части карточки от левого края */
+.description
+{
+    padding-left: 10px;
+}
+
+
+
+
