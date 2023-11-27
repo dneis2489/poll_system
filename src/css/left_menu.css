@@ -48,6 +48,7 @@ li
     transition: background-color 0.3s;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 /* Текст элемента меню */
