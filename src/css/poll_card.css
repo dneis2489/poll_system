@@ -1,41 +1,34 @@
-/* Шрифт для всего текста */
 @font-face {
     font-family: Comforta;
     src: url(../fonts/Comfortaa-Bold.ttf);
 }
 
-/* Цвета */
-:root
-{
+:root {
     --main_color_blue: #1E88E5;
     --main_color_grey: #424242;
     --drop_down_color: white;
     --text_color: white;
-    --shadow: rgba(0,0,0,0.4);
-    --main_card_color: rgba(66,66,66,0.2);
+    --shadow: rgba(0, 0, 0, 0.4);
+    --main_card_color: rgba(66, 66, 66, 0.2);
 }
 
-/* Расположение и поведение блока со всеми карточками */
-.polls
-{
+.polls {
     max-width: 1680px;
     margin-left: 230px;
     margin-top: 10px;
 }
 
 /* Отступы между карточками */
-.poll_element
-{
+.poll_element {
     margin-top: 15px;
 }
 
 /* Шапка карточки */
-.poll_header_card
-{
+.poll_header_card {
     border: solid var(--main_color_blue) 1px;
     background-color: var(--main_color_blue);
     border-radius: 10px;
-    height: 60px;
+    height: 10vh;
     display: flex;
     position: relative;
     color: var(--text_color);
@@ -44,42 +37,87 @@
     z-index: 1;
 }
 
-
-/* Правый блок с текстом в шапке (Позиционирование по правому краю)*/
-.right_headder_card
-{
+/* Правый блок с текстом в шапке (Позиционирование по правому краю) */
+.right_headder_card {
     margin-left: auto;
     padding-right: 10px;
 }
 
-/* Левый блок с текстом в шапке (Позиционирование по левому краю)*/
-.left_headder_card
-{
+/* Левый блок с текстом в шапке (Позиционирование по левому краю) */
+.left_headder_card {
     padding-left: 10px;
 }
 
 /* Весь текст в шапке (Отступы между текстом) */
-.text_header_card
-{
+.text_header_card {
     margin-top: 8px;
 }
 
-
 /* Основная часть карточки */
-.poll_main_card
-{
+.poll_main_card {
     padding-top: 10px;
     border: solid var(--main_card_color) 1px;
     border-radius: 0px 0px 10px 10px;
     background-color: var(--main_card_color);
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
 }
 
 /* Отступ текста в основной части карточки от левого края */
-.description
-{
+.description {
     padding-left: 10px;
 }
 
+/* Развернутая часть карточки */
+.poll_main_card_expanded {
+    max-height: 1000px; 
+}
+
+/* Кнопки для голосования и чата */
+.voting_buttons {
+    margin-top: 10px;
+    text-align: center; 
+}
+
+.voting_buttons button {
+    margin: 0 10px; 
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: var(--main_color_blue);
+    color: var(--text_color);
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.voting_buttons button:hover {
+    background-color: #0d5cb6;
+}
+/* Развернутая часть карточки */
+.poll_main_card_expanded {
+    max-height: 1000px; 
+}
 
 
+.expanded_image {
+    background-image: url('../img/header/image.png');
+    background-size: 100% 100%; 
+    height: 200px; 
+    margin-bottom: 10px;
+}
+.poll-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
+input[type="range"] {
+  width: 200px;
+  margin: 0 10px;
+}
+
+button {
+  margin-top: 10px;
+}

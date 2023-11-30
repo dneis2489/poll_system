@@ -1,4 +1,5 @@
 import React from 'react';
+import PollCard from './poll_card';
 import '../css/poll_card.css'
 
 //Тестовые данные
@@ -22,30 +23,27 @@ const list = [
 
 //Сборка списка с опросами из объекта
 const Polls = () => {
-    return(
-        <div>
-            {list.map((item, index) => (
-                <div key={index} className="poll_element">
-                    <div className="poll_header_card">
-                        <div className="left_headder_card">
-                            <div className="name text_header_card">{item.name}</div>
-                            <div className="date text_header_card">Сроки проведения: {item.start_date} - {item.end_date} </div>
-                        </div>
-                        <div className="right_headder_card">
-                            <div className="status text_header_card">Статус: {item.status} </div>
-                            <div className="users_in_poll text_header_card">Проголосовало: {item.voited} /{item.people} </div>
-                        </div>
-                    </div>
-                    <div className="poll_main_card">
-                        <div className="image"></div>
-                        <div className="description">{item.description}</div>
-                    </div>
-                </div>
-            ))}
-        </div>
-    )
-       
-}
+    const handleVote = (poll) => {
+      // Обработчик для голосования
+      alert(`Голос за опрос ${poll.name}`);
+    };
+  
+    const handleChatClick = () => {
+      // Обработчик для открытия чата
+      alert('Открываем чат');
+    };
+  
+    return (
+      <div>
+        {list.map((item, index) => (
+          <div key={index} className="poll_element">
+            {/* данные опроса и обработчики событий в компонент PollCard */}
+            <PollCard pollData={item} handleVote={handleVote} handleChatClick={handleChatClick} />
+          </div>
+        ))}
+      </div>
+    );
+  };
 
 //Список с опросами
 const pollList = () => {
