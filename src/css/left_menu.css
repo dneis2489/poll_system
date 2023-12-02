@@ -29,6 +29,7 @@ body
     background-color: var(--main_color_grey);
     position: fixed;
     height: 100%;
+    margin-top: 50px;
 }
 
 /* Структура содержащая элементы меню */

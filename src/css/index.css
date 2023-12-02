@@ -4,3 +4,9 @@ body
     padding: 0;
     height: 100vh;
 }
+
+#root
+{
+    position: fixed;
+    z-index: 1000;
+}

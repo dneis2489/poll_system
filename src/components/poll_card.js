@@ -68,7 +68,7 @@ const PollCard = ({ pollData }) => {
     
     
   return (
-    <div className={`poll_card ${expanded ? 'expanded' : ''}`}>
+    <div className={`poll_card`}>
       <div className="poll_header_card" onClick={handleExpand}>
         
         <div className="left_headder_card">
@@ -83,16 +83,13 @@ const PollCard = ({ pollData }) => {
           <div className="users_in_poll text_header_card">
             Проголосовало: {pollData.numberVotes} /{pollData.maxNumberVoted}
           </div>
-          <div className="expand_button" >
-            {expanded ? 'Свернуть' : 'Развернуть'}
-          </div>
         </div>
       </div>
 
       {expanded && (
         <div className="poll_main_card_expanded">
           <div className="expanded_image"></div>
-
+          <div className='description_text'>{pollData.description}</div>
           
           <div className="voting_buttons">
             <button onClick={() => handleVote(pollData)}>Проголосовать</button>

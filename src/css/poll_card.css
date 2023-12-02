@@ -15,7 +15,7 @@
 .polls {
     max-width: 1680px;
     margin-left: 230px;
-    margin-top: 10px;
+    padding-top: 50px;
 }
 
 /* Отступы между карточками */
@@ -28,14 +28,14 @@
     border: solid var(--main_color_blue) 1px;
     background-color: var(--main_color_blue);
     border-radius: 10px;
-    height: 10vh;
+    height: 8vh;
     display: flex;
     position: relative;
     color: var(--text_color);
     font-family: Comforta;
-    margin-bottom: -10px;
     z-index: 1;
     cursor: pointer;
+    padding-top: 10px;
 }
 
 /* Правый блок с текстом в шапке (Позиционирование по правому краю) */
@@ -51,19 +51,9 @@
 
 /* Весь текст в шапке (Отступы между текстом) */
 .text_header_card {
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
-/* Основная часть карточки */
-.poll_main_card {
-    padding-top: 10px;
-    border: solid var(--main_card_color) 1px;
-    border-radius: 0px 0px 10px 10px;
-    background-color: var(--main_card_color);
-    transition: max-height 0.3s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
-}
 
 /* Отступ текста в основной части карточки от левого края */
 .description {
@@ -72,7 +62,13 @@
 
 /* Развернутая часть карточки */
 .poll_main_card_expanded {
-    max-height: 1000px; 
+    min-height: 500px; 
+    
+    border: solid var(--main_card_color) 1px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: var(--main_card_color);
+    padding-top: 10px;
+    margin-top: -10px;
 }
 
 /* Кнопки для голосования и чата */
@@ -101,13 +97,6 @@
     max-height: 1000px; 
 }
 
-
-.expanded_image {
-    background-image: url('../img/header/image.png');
-    background-size: 100% 100%; 
-    height: 200px; 
-    margin-bottom: 10px;
-}
 .poll-option {
   display: flex;
   align-items: center;

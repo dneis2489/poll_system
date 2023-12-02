@@ -2,12 +2,12 @@ import Head from './components/header'
 import LeftMenu from './components/left_menu'
 import PollList from './components/poll_list'
 import ReactDOM from 'react-dom';
-
+import '../src/css/poll_list_html.css'
 
 //Подлкючаем header к основной странице
 const Header = () => {
     return (
-      <header>
+      <header id='head'>
         <Head />
       </header>
     );

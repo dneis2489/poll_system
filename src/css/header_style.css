@@ -31,6 +31,7 @@ body
     margin: 0;
     box-shadow: 0 0 10px var(--shadow);
     display: inline-block;
+    position: relative;
 }
 
 /* Поведение контейнера содрежащего все блоки */

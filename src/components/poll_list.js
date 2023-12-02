@@ -11,7 +11,7 @@ function GetPollList(){
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/poll/filtered_list?sort=name&limit=5&page=0')
+      .get('http://localhost:8080/poll/filtered_list?sort=name&limit=20&page=0')
       .then(data => {
         setPolls(data.data.items);
       })
