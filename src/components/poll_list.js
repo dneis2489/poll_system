@@ -13,10 +13,11 @@ function GetPollList(){
   //Состояние на подгрузку данных
   const[fetching, setFetching] = useState(true)
 
- //Состояние на подгрузку данных
+ //Общее количество данных, которые мы можем подгрузить
  const[totalCount, setTotalCount] = useState(0)
   
 
+ //Получение данных
   useEffect(() => {
     if(fetching){
       axios
@@ -38,6 +39,7 @@ function GetPollList(){
     }
   })
 
+  //Условие на необходимость подгружать данные
   const scrollHandler = (e) => {
     if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100 && polls.length < totalCount)
     {
