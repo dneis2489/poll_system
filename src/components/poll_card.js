@@ -90,8 +90,25 @@ const PollCard = ({ pollData }) => {
         <div className='poll_main_card_expanded'>
             <div className='main_data_in_card'>
               <div className="expanded_image"></div>
+              <h4>Описание опроса:</h4>
               <div className='description_text'>{pollData.description}</div>
-          
+              <div className='votes_elements'>
+              <h4>Варианты голоования:</h4>
+                <ul>
+                  {pollData.pollValues.map(votes => (
+                    <li key={votes.id} className='vote_elem'>
+                      <label className='vote_label'>
+                        <input
+                          type="radio"
+                          name="options"
+                        />
+                        {votes.value}
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
               <div className="voting_buttons">
                 <button onClick={() => handleVote(pollData)}>Проголосовать</button>
                 <button onClick={handleToggleChat}>Чат</button>
