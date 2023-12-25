@@ -87,16 +87,20 @@ const PollCard = ({ pollData }) => {
       </div>
 
       {expanded && (
-        <div className="poll_main_card_expanded">
-          <div className="expanded_image"></div>
-          <div className='description_text'>{pollData.description}</div>
+        <div className='poll_main_card_expanded'>
+            <div className='main_data_in_card'>
+              <div className="expanded_image"></div>
+              <div className='description_text'>{pollData.description}</div>
           
-          <div className="voting_buttons">
-            <button onClick={() => handleVote(pollData)}>Проголосовать</button>
-            <button onClick={handleToggleChat}>Чат</button>
+              <div className="voting_buttons">
+                <button onClick={() => handleVote(pollData)}>Проголосовать</button>
+                <button onClick={handleToggleChat}>Чат</button>
+              </div>
+            </div>
+            <div className='chat_in_card'>
+              {isChatOpen && <Chat onCloseChat={handleToggleChat} />}
+            </div>
           </div>
-          {isChatOpen && <Chat onCloseChat={handleToggleChat} />}
-        </div>
       )}
     </div>
   );

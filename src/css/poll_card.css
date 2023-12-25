@@ -63,12 +63,23 @@
 /* Развернутая часть карточки */
 .poll_main_card_expanded {
     min-height: 500px; 
-    
+    display: flex;
     border: solid var(--main_card_color) 1px;
     border-radius: 0px 0px 10px 10px;
     background-color: var(--main_card_color);
     padding-top: 10px;
     margin-top: -10px;
+}
+
+.main_data_in_card
+{
+    width: 60%;
+}
+
+.chat_in_card
+{
+    width: 40%;
+    margin: 10px 30px 10px 30px;
 }
 
 /* Кнопки для голосования и чата */
@@ -110,4 +121,14 @@ input[type="range"] {
 
 button {
   margin-top: 10px;
+}
+
+.card_data
+{
+    display: flex;
+}
+
+.chat_in_card
+{
+    float: right;
 }
