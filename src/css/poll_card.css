@@ -143,6 +143,7 @@ button {
     display: flex;
 }
 
+
 .chat_in_card
 {
     float: right;
@@ -169,6 +170,11 @@ button {
     width: 100%;
     height: 100%;
     appearance: none;
+    color: white;
+}
+
+.vote_elem:hover {
+    background-color: #0d5cb6;
 }
 
 input

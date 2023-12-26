@@ -8,7 +8,6 @@ const convertDate = (dateString) => {
   const date = new Date(dateString);
 
   // Определяем часовой пояс клиента
-  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const offsetInMinutes = date.getTimezoneOffset();
 
   // Вычисляем смещение часового пояса клиента в миллисекундах
@@ -31,11 +30,11 @@ const convertDate = (dateString) => {
 };
 
 const convertStatus = (status) => {
-  if(status == 'active')
+  if(status === 'active')
   {
     return "Активен"
   } 
-  else if (status == 'planned')
+  else if (status === 'planned')
   {
     return 'Запланирован'
   }
@@ -59,7 +58,7 @@ const PollCard = ({ pollData }) => {
   };
   
 
-    const [isChatOpen, setIsChatOpen] = useState(false);
+    const [isChatOpen, setIsChatOpen] = useState(true);
 
 
     const handleToggleChat = () => {
@@ -93,7 +92,7 @@ const PollCard = ({ pollData }) => {
               <h4>Описание опроса:</h4>
               <div className='description_text'>{pollData.description}</div>
               <div className='votes_elements'>
-              <h4>Варианты голоования:</h4>
+              <h4>Варианты голоcования:</h4>
                 <ul>
                   {pollData.pollValues.map(votes => (
                     <li key={votes.id} className='vote_elem'>
